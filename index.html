@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sagar Construction - Attendance Register</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>SAGAR CONSTRUCTION</h1>
+
+<p>Weekly Attendance & Payment Register</p>
+
+</header>
+
+<div class="top-bar">
+
+<div class="left">
+
+<label>Week Starting</label>
+
+<input type="date" id="weekStart">
+
+</div>
+
+<div class="right">
+
+<button id="saveBtn">Save</button>
+
+<button id="printBtn">Print</button>
+
+<button id="exportBtn">Export Excel</button>
+
+</div>
+
+</div>
+
+<div class="summary">
+
+<div class="card">
+
+<h3>Total Workers</h3>
+
+<h2 id="workerCount">20</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Total Present</h3>
+
+<h2 id="totalPresent">0</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Total Payment</h3>
+
+<h2>₹ <span id="grandTotal">0</span></h2>
+
+</div>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchWorker"
+placeholder="Search Worker Name...">
+
+<button id="addWorker">
+
++ Add Worker
+
+</button>
+
+</div>
+
+<div class="table-container">
+
+<table id="attendanceTable">
+
+<thead>
+
+<tr>
+
+<th>Sr</th>
+
+<th>Worker Name</th>
+
+<th>Daily Wage</th>
+
+<th>Sun</th>
+
+<th>Mon</th>
+
+<th>Tue</th>
+
+<th>Wed</th>
+
+<th>Thu</th>
+
+<th>Fri</th>
+
+<th>Sat</th>
+
+<th>Present</th>
+
+<th>Total</th>
+
+<th>Advance</th>
+
+<th>Balance</th>
+
+<th>Delete</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+<!-- JavaScript will create rows -->
+
+</tbody>
+
+</table>
+
+</div>
+
+<footer>
+
+<p>
+
+Developed for
+
+<b>Sagar Construction</b>
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+<!-- ===========================
+     PAYMENT SUMMARY
+============================ -->
+
+<section class="payment-summary">
+
+<h2>Weekly Payment Summary</h2>
+
+<div class="summary-grid">
+
+<div class="summary-box">
+
+<label>Total Workers</label>
+
+<h3 id="summaryWorkers">20</h3>
+
+</div>
+
+<div class="summary-box">
+
+<label>Total Present Days</label>
+
+<h3 id="summaryPresent">0</h3>
+
+</div>
+
+<div class="summary-box">
+
+<label>Total Salary</label>
+
+<h3>₹ <span id="summarySalary">0</span></h3>
+
+</div>
+
+<div class="summary-box">
+
+<label>Total Advance</label>
+
+<h3>₹ <span id="summaryAdvance">0</span></h3>
+
+</div>
+
+<div class="summary-box">
+
+<label>Net Payment</label>
+
+<h3>₹ <span id="summaryBalance">0</span></h3>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===========================
+     ACTION BUTTONS
+============================ -->
+
+<section class="action-buttons">
+
+<button id="calculateBtn">
+
+Calculate Salary
+
+</button>
+
+<button id="resetBtn">
+
+New Week
+
+</button>
+
+<button id="downloadBtn">
+
+Download Excel
+
+</button>
+
+<button id="pdfBtn">
+
+Save PDF
+
+</button>
+
+</section>
+
+
+<!-- ===========================
+     PRINT FOOTER
+============================ -->
+
+<section class="print-footer">
+
+<div class="left-sign">
+
+<p>
+
+Prepared By
+
+</p>
+
+<br><br>
+
+_________________
+
+</div>
+
+<div class="right-sign">
+
+<p>
+
+Approved By
+
+</p>
+
+<br><br>
+
+_________________
+
+</div>
+
+</section>
+
+
+<!-- ===========================
+     VERSION
+============================ -->
+
+<div class="version">
+
+Version 2.0
+
+</div>

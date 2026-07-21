@@ -1,0 +1,343 @@
+/* =====================================
+   SAGAR CONSTRUCTION V2
+   STYLE.CSS (PART 2A)
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f2f5f9;
+    color:#222;
+}
+
+.container{
+    width:95%;
+    max-width:1600px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+header h1{
+    color:#0b6b36;
+    font-size:34px;
+    font-weight:700;
+}
+
+header p{
+    color:#666;
+    margin-top:5px;
+}
+
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.top-bar label{
+    font-weight:600;
+}
+
+.top-bar input{
+    padding:8px 10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.right{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+button{
+    background:#0b6b36;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+button:hover{
+    background:#094f29;
+}
+
+.summary{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin:25px 0;
+}
+
+.card{
+    background:#0b6b36;
+    color:#fff;
+    padding:18px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.card h2{
+    margin-top:10px;
+    font-size:28px;
+}
+
+.search-box{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.search-box input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.table-container{
+    overflow:auto;
+    border:1px solid #ddd;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:1200px;
+}
+
+table th{
+    background:#0b6b36;
+    color:white;
+    padding:10px;
+    border:1px solid #ddd;
+    font-size:14px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:8px;
+    text-align:center;
+}
+
+table input[type=text],
+table input[type=number]{
+    width:100%;
+    border:none;
+    outline:none;
+    text-align:center;
+    padding:5px;
+    background:transparent;
+}
+
+table input[type=checkbox]{
+    transform:scale(1.2);
+    cursor:pointer;
+}
+/* =====================================
+   SAGAR CONSTRUCTION V2
+   STYLE.CSS (PART 2B)
+===================================== */
+
+.payment-summary{
+    margin-top:30px;
+    padding:20px;
+    background:#f8f8f8;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.payment-summary h2{
+    text-align:center;
+    color:#0b6b36;
+    margin-bottom:20px;
+}
+
+.summary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.summary-box{
+    background:white;
+    border:2px solid #0b6b36;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+}
+
+.summary-box label{
+    display:block;
+    font-size:14px;
+    color:#555;
+    margin-bottom:8px;
+}
+
+.summary-box h3{
+    color:#0b6b36;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:30px 0;
+}
+
+.action-buttons button{
+    min-width:170px;
+}
+
+.print-footer{
+    margin-top:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+.left-sign,
+.right-sign{
+    text-align:center;
+    width:220px;
+    font-weight:600;
+}
+
+.version{
+    text-align:center;
+    color:#888;
+    margin-top:25px;
+    font-size:13px;
+}
+
+footer{
+    margin-top:25px;
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media(max-width:768px){
+
+.container{
+    width:100%;
+    margin:0;
+    border-radius:0;
+    padding:12px;
+}
+
+header h1{
+    font-size:24px;
+}
+
+.summary{
+    grid-template-columns:1fr;
+}
+
+.top-bar{
+    flex-direction:column;
+    align-items:stretch;
+}
+
+.right{
+    width:100%;
+}
+
+.right button,
+.action-buttons button,
+.search-box button{
+    width:100%;
+}
+
+.search-box{
+    flex-direction:column;
+}
+
+.summary-grid{
+    grid-template-columns:1fr;
+}
+
+.print-footer{
+    flex-direction:column;
+    gap:40px;
+    align-items:center;
+}
+
+}
+
+/* =====================
+   PRINT MODE
+===================== */
+
+@media print{
+
+body{
+    background:white;
+}
+
+.container{
+    box-shadow:none;
+    border:none;
+    width:100%;
+}
+
+button{
+    display:none;
+}
+
+.search-box{
+    display:none;
+}
+
+.top-bar .right{
+    display:none;
+}
+
+.action-buttons{
+    display:none;
+}
+
+.version{
+    display:none;
+}
+
+input{
+    border:none !important;
+}
+
+table{
+    font-size:11px;
+}
+
+table th{
+    background:#eee !important;
+    color:black !important;
+}
+
+}
